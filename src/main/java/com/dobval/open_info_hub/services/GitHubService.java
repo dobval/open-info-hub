@@ -26,7 +26,8 @@ public class GitHubService {
 		    } else {
 		        throw new RuntimeException("GitHub API failed with status: " + response.getStatusCode());
 		    }
-		} catch (RestClientException e) {
+		} 
+		catch (RestClientException e) {
 		    throw new RuntimeException("GitHub API error", e);
 		}
 

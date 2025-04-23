@@ -20,7 +20,7 @@ class GitHubServiceTest {
         GitHubProfile profile = gitHubService.fetchProfile("octocat");
         System.out.println("Profile: " + profile);
         assertNotNull(profile);
-        assertEquals("octocat", profile.getLogin()); //TODO: Fix Lombok - getLogin() shows as undefined!
+        assertEquals("octocat", profile.getLogin()); 
     }
 }
 
