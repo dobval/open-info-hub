@@ -15,7 +15,7 @@ class WeatherServiceTest {
 
     @Test
     void testFetchForecast() {
-        WeatherForecast forecast = weatherService.fetchForecast(52.52, 13.41); // Berlin coords
+        WeatherForecast forecast = weatherService.fetchForecast("Berlin");
         assertNotNull(forecast);
         assertNotNull(forecast.getDaily());
         assertFalse(forecast.getDaily().getTemperature_2m_max().isEmpty());

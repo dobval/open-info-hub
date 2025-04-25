@@ -17,7 +17,7 @@ public class CurrencyService {
 	        if (currencyRate != null && currencyRate.getUsd() > 0) {
 	            return currencyRate.getUsd();
 	        } else {
-	            throw new RuntimeException("Failed to retrieve exchange rate data."); //TODO: fix FOREX retrieval
+	            throw new RuntimeException("Exchange rate should be greater than 0"); //TODO: fix FOREX retrieval
 	        }
         }
 	    catch (RestClientException e) {
