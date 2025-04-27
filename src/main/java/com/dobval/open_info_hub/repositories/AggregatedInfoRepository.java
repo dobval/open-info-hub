@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface AggregatedInfoRepository extends JpaRepository<AggregatedInfo, Long> {
     // Add custom query methods if needed
+	// TODO: is a repository needed?
 }
