@@ -1,15 +1,12 @@
 package com.dobval.open_info_hub.services;
 
 import java.net.URI;
-import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.dobval.open_info_hub.models.GeocodingApiResult;
 import com.dobval.open_info_hub.models.GeocodingCoordinates;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.Data;
 
 @Service
 public class GeocodingService {

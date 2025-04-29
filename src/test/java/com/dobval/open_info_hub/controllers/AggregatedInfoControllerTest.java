@@ -17,9 +17,9 @@ class AggregatedInfoControllerTest {
     private MockMvc mockMvc;
 
     @Test
-    void testAggregateAndGetInfo() throws Exception { //TODO: Fix test
+    void testAggregateAndGetInfo() throws Exception {
         // Test POST (aggregation)
-        mockMvc.perform(post("/api/info")
+    	mockMvc.perform(post("/api/info")
                 .param("username", "octocat")
                 .param("city", "Berlin"))
                 .andExpect(status().isOk())
