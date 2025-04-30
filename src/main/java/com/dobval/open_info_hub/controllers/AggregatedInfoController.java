@@ -12,7 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/info")
 @Component
-public class AggregatedInfoController {
+public class AggregatedInfoController { //deals only with JSON input/output (for APIs).
 
     private final AggregatorService aggregatorService;
     private final AggregatedInfoRepository repository;
