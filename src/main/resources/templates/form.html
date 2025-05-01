@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Info Aggregator</title></head>
+<body>
+    <h1>Enter Info</h1>
+    <form th:action="@{/aggregate}" method="post">
+        GitHub Username: <input type="text" name="username" /><br/>
+        City: <input type="text" name="city" /><br/>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -26,8 +26,8 @@ public class ViewController { //handles rendering HTML (human-readable)
     }
 
     @PostMapping("/aggregate")
-    public String aggregate(@RequestParam String username,
-                            @RequestParam String city,
+    public String aggregate(@RequestParam(required = false) String username,
+                            @RequestParam(required = false) String city,
                             Model model) {
         AggregatedInfo info = aggregatorService.aggregateInfo(username, city);
         model.addAttribute("info", info);

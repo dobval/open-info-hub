@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Aggregated Info</title></head>
+<body>
+    <h1>Aggregated Info</h1>
+    <p>Username: <span th:text="${info.username}" /></p>
+    <p>City: <span th:text="${info.city}" /></p>
+    <p>Weather: <span th:text="${info.weather}" /></p>
+    <p>GitHub Followers: <span th:text="${info.githubFollowers} == -1 ? 'Please input Github username' : ${info.githubFollowers}" /></p>
+    <p>GitHub Repos: <span th:text="${info.githubRepos} == -1 ? 'Please input Github username' : ${info.githubRepos}" /></p>
+    <p>EUR to USD Rate: <span th:text="${info.eurToUsdRate}" /></p>
+</body>
+</html>

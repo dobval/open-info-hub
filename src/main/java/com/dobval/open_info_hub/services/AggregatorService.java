@@ -26,16 +26,31 @@ public class AggregatorService {
     private AggregatedInfoRepository aggregatedInfoRepository;
 
     public AggregatedInfo aggregateInfo(String username, String city) {
-        GitHubProfile profile = gitHubService.fetchProfile(username);
-        String weather = weatherService.fetchForecast(city).toString(); // make sure this is a string
+        AggregatedInfo info = new AggregatedInfo();
+
+        // check if user submitted empty input fields (should still show other info)
+        info.setUsername(username != null ? username : "");
+        info.setCity(city != null ? city : "");
+        
+        if (username != null && !username.trim().isEmpty()) {
+        	GitHubProfile profile = gitHubService.fetchProfile(username);
+        	info.setGithubRepos(profile.getPublic_repos());
+            info.setGithubFollowers(profile.getFollowers());
+        }
+        else {
+        	info.setGithubRepos(-1);
+            info.setGithubFollowers(-1);
+        }
+        
+        if (city != null && !city.trim().isEmpty()) {
+            info.setWeather(weatherService.fetchForecast(city).toString());
+        } 
+        else {
+            info.setWeather("Please input city");
+        }
+        
         double exchangeRate = currencyService.fetchEurToUsdRate();
 
-        AggregatedInfo info = new AggregatedInfo();
-        info.setUsername(username);
-        info.setGithubRepos(profile.getPublic_repos());
-        info.setGithubFollowers(profile.getFollowers());
-        info.setCity(city);
-        info.setWeather(weather);
         info.setEurToUsdRate(exchangeRate);
         info.setFetchedAt(LocalDateTime.now());
 
