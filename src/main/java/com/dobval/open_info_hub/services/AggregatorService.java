@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.Collections;
 
 @Service
 public class AggregatorService {
@@ -43,10 +44,10 @@ public class AggregatorService {
         }
         
         if (city != null && !city.trim().isEmpty()) {
-            info.setWeather(weatherService.fetchForecast(city).toString());
+            info.setDailyForecasts(weatherService.fetchForecast(city));
         } 
         else {
-            info.setWeather("Please input city");
+            info.setDailyForecasts(Collections.emptyList());
         }
         
         double exchangeRate = currencyService.fetchEurToUsdRate();
