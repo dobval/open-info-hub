@@ -1,6 +1,6 @@
 # Open Info Hub
 
- <!--![Project Banner](path/to/banner.png) do I need a banner?-->
+   <img src="https://github.com/dobval/open-info-hub/blob/main/media/open-info-hub.gif?raw=true" alt="open-info-hub" style="width: 400px; height: auto;" />
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -8,7 +8,6 @@
 - [Technologies Used](#technologies-used)
 - [Setup](#setup)
 - [Usage](#usage)
-- [Screenshots](#screenshots)
 - [License](#license)
 
 ## Introduction
@@ -49,11 +48,6 @@ Open Info Hub is full-stack Java web app that aggregates real-time data from var
 
 1. Open your browser and navigate to `http://localhost:8080`.
 2. Enter a GitHub username and a city name to see the aggregated information.
-
-## Screenshots
-
-<!--MAYBE GIF? ![Screenshot 1](willaddsoon/screenshot1.png)
-![Screenshot 2](willaddsoon/screenshot2.png) -->
 
 ## License
 
