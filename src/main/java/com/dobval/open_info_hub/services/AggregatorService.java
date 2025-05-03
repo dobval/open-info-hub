@@ -55,7 +55,7 @@ public class AggregatorService {
         info.setEurToUsdRate(exchangeRate);
         info.setFetchedAt(LocalDateTime.now());
 
-        return aggregatedInfoRepository.save(info); // <- persist
+        return aggregatedInfoRepository.save(info); // persist
     }
     
 }

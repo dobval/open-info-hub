@@ -25,7 +25,7 @@ class AggregatorServiceTest {
         assertTrue(info.getGithubRepos() >= 0, "GitHub repo count should be non-negative");
         assertTrue(info.getGithubFollowers() >= 0, "GitHub follower count should be non-negative");
         assertTrue(info.getEurToUsdRate() > 0, "Exchange rate should be greater than 0");
-        assertNotNull(info.getWeather(), "Weather should not be null");
+        assertNotNull(info.getDailyForecasts(), "Weather should not be null");
         assertNotNull(info.getFetchedAt(), "FetchedAt should be set");
     }
 }
